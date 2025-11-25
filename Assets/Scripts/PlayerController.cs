@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
 
         // --- Jump ---
         // If player is grounded AND the Jump button (Spacebar by default) is pressed:
-        if (isGrounded && Input.GetButtonDown("Jump"))
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             // Set vertical velocity to jumpForce (launch upward).
             // Horizontal velocity stays the same.
