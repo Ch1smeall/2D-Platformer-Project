@@ -3,7 +3,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float speed = 2f;          // horizontal speed
-    public float moveDistance = 1f;   // patrol distance from start position
+    public float moveDistance = 0.5f;   // patrol distance from start position
 
     private Rigidbody2D rb;
     private float leftBoundary;

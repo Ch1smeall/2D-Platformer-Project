@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -8059981549428035769}
   - component: {fileID: -8814155288755833701}
   - component: {fileID: -1505947662913359984}
+  - component: {fileID: 9084062383334189472}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -220,6 +221,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   health: 100
   damageAmount: 25
+--- !u!95 &9084062383334189472
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2327641652767268168}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 922cb87d42dfbf14e8578327c639b64d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6668548810244967976
 GameObject:
   m_ObjectHideFlags: 0

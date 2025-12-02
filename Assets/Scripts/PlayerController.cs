@@ -4,7 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     // Public variables appear in the Inspector, so you can tweak them without editing code.
     public float moveSpeed = 4f;       // How fast the player moves left/right
-    
+
     //Jump realated variables for the Jump Feature (later)
     public float jumpForce = 8f;      // How strong the jump is (vertical speed)
     public Transform groundCheck;      // Empty child object placed at the player's feet
@@ -14,11 +14,13 @@ public class PlayerController : MonoBehaviour
     // Private variables are used internally by the script.
     private Rigidbody2D rb;            // Reference to the Rigidbody2D component
     private bool isGrounded;           // True if player is standing on ground
+    private Animator animator;
 
     void Start()
     {
         // Grab the Rigidbody2D attached to the Player object once at the start.
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -43,6 +45,33 @@ public class PlayerController : MonoBehaviour
             // Horizontal velocity stays the same.
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
-        
+
+        SetAnimation(moveInput);
+    }
+
+    private void SetAnimation(float moveInput)
+    {
+        if (isGrounded)
+        {
+            if (moveInput == 0)
+            {
+                animator.Play("Player_Idle");
+            }
+            else
+            {
+                animator.Play("Player_Run");
+            }
+        }
+        else
+        {
+            if (rb.linearVelocityY > 0)
+            {
+                animator.Play("Player_Jump");
+            }
+            else
+            {
+                animator.Play("Player_Fall");
+            }
+        }
     }
 }
