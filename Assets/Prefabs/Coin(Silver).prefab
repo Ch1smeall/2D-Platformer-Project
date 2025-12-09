@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2178668872357696207}
   - component: {fileID: 2701042749105920335}
   m_Layer: 0
-  m_Name: Coin(Gold)
+  m_Name: Coin(Silver)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -144,6 +144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba8bb5dde6180240b785dc20448130c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coin
+  coinClip: {fileID: 0}
+  coinsToGive: 1
+  coinText: {fileID: 0}
 --- !u!61 &2701042749105920335
 BoxCollider2D:
   m_ObjectHideFlags: 0
