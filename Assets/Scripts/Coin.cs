@@ -20,6 +20,8 @@ public class Coin : MonoBehaviour
 
             if (player != null)
             {
+                player.coins += 1;
+                SoundManager.Instance.PlaySFX("COIN", 0.4f);
                 player.coins += coinsToGive;
                 coinText.text = player.coins.ToString();
                 Destroy(gameObject);
